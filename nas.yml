@@ -293,6 +293,16 @@
         - piwigo
       when: (piwigo_enabled | default(False))
 
+    - role: wireguard
+      tags: 
+        - wireguard
+      when: enable_wireguard | default(False)
+
+    - role: pihole
+      tags: 
+        - pihole
+      when: enable_pihole | default(False)
+
   tasks:
     - import_tasks: tasks/thelounge.yml
       when: (thelounge_enabled | default(False))
