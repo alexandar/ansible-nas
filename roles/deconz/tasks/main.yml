@@ -22,5 +22,5 @@
       "DEBUG_OTAU": "0"
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
-      - "~/.local/share/dresden-elektronik/deCONZ:/root/.local/share/dresden-elektronik/deCONZ"
+      - "{{ docker_home }}/deCONZ:/opt/deCONZ"
     restart_policy: unless-stopped

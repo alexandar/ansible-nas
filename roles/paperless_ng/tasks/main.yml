@@ -61,6 +61,7 @@
       USERMAP_UID: "{{ paperless_ng_user_id }}"
       USERMAP_GID: "{{ paperless_ng_group_id }}"
       PAPERLESS_OCR_LANGUAGES: "{{ paperless_ng_languages }}"
+      PAPERLESS_OCR_LANGUAGE: "bul"
     restart_policy: unless-stopped
     memory: "{{ paperless_ng_ui_memory }}"
     networks:
